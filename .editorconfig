@@ -1,0 +1,17 @@
+# EditorConfig is awesome: https://editorconfig.org/
+
+# top-most EditorConfig file
+root = true
+
+# Matches all files (change to '[*.{c,h}]' for C applications)
+[*.{c,h}]
+
+# Change these settings to your own preference
+indent_style = tab
+indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
