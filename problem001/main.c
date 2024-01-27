@@ -12,8 +12,7 @@ double heron_formula(double a, double b, double c) {
     return area;
 }
 
-int valid_triangle(double a, double b, double c) {
-    // A triangle is valid if sum of its two sides is greater than the third side
+int is_valid_triangle(double a, double b, double c) {
     // Un triunghi este valid atunci cand suma a doua laturi este mai mare ca a 3a
     if (a < 0 || b < 0 || c < 0)
         return 0;
@@ -22,7 +21,7 @@ int valid_triangle(double a, double b, double c) {
     return 1;
 }
 
-double parse_arg(char *arg) {
+double is_valid_input_nr(char *arg) {
     char *endptr;
     double value = strtod(arg, &endptr);
 
@@ -40,11 +39,11 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    double a = parse_arg(argv[1]);
-    double b = parse_arg(argv[2]);
-    double c = parse_arg(argv[3]);
+    double a = is_valid_input_nr(argv[1]);
+    double b = is_valid_input_nr(argv[2]);
+    double c = is_valid_input_nr(argv[3]);
 
-    if (!valid_triangle(a, b, c)) {
+    if (!is_valid_triangle(a, b, c)) {
         printf("Eroare: Triunghi invalid cu laturile %.2lf, %.2lf, %.2lf\n", a, b, c);
         return 1;
     }
